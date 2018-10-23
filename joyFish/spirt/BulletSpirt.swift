@@ -44,7 +44,7 @@ class BulletSpirt :SKSpriteNode,AfterAddToGameScene{
         position = point
         zPosition = JoyFishConstant.bulletzPosition
         zRotation = CGFloat.pi/2 - direction
-        speed = 2
+        speed = 2.0 + CGFloat(level)/2
         
         physicsBody = SKPhysicsBody(texture: texture, size: size)
         physicsBody?.isDynamic = true
@@ -55,7 +55,7 @@ class BulletSpirt :SKSpriteNode,AfterAddToGameScene{
     }
     
     deinit {
-        print("bullet out!!!")
+        //print("bullet out!!!")
     }
     
     public func collide(){

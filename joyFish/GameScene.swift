@@ -20,7 +20,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     }
     
     func createFishAction() {
-        let waitAct = SKAction.wait(forDuration: 2, withRange: 1)
+        let waitAct = SKAction.wait(forDuration: 1, withRange: 1)
         let createAct = SKAction.run {
             self.initFishSpirt()
         }
@@ -61,12 +61,13 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
             bodyA = contact.bodyB
             bodyB = contact.bodyA
         }
+
         if let _ = bodyB.node as? FishSprit,let bullet = bodyA.node as? BulletSpirt{
             bullet.collide()
         }
-        if let _ = bodyB.node as? FishSprit,let web = bodyA.node as? WebSpirt{
-            print(11111)
-            print(web)
+        if let fish = bodyB.node as? FishSprit,let web = bodyA.node as? WebSpirt{
+            fish.dead()
+            web.collideTimes += 1
         }
 
         

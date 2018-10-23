@@ -75,23 +75,24 @@ class FishSprit :SKSpriteNode,AfterAddToGameScene{
         zPosition = JoyFishConstant.fishzPosition
         
         physicsBody = SKPhysicsBody(texture: texture!, size: size)
-        physicsBody?.isDynamic = false
+        physicsBody?.isDynamic = true
         physicsBody?.affectedByGravity = false
         physicsBody?.categoryBitMask = JoyFishConstant.fishCategoryBitMask
-        //physicsBody?.contactTestBitMask = JoyFishConstant.bulletCategoryBitMask                
+        physicsBody?.collisionBitMask = 0
+        physicsBody?.contactTestBitMask = JoyFishConstant.bulletCategoryBitMask | JoyFishConstant.webCategoryBitMask
     }
     
     deinit {
-        print("fish out!!")
+        //print("fish out!!")
     }
     
     public func dead(){
+        physicsBody = nil
         removeAction(forKey: "swim")
         removeAction(forKey: "move")
         let deadAction = SKAction.animate(with: deadTextures, timePerFrame: 0.15)
         run(SKAction.repeat(deadAction, count: 4),
-                      completion: {
-                        self.removeFromParent()
+                      completion: {                
                         self.removeFromParent()
                       }
         )
