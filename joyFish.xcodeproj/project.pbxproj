@@ -7,27 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4118F712217C439C00DD81A1 /* CannonSpirt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4118F711217C439C00DD81A1 /* CannonSpirt.swift */; };
+		4118F714217D6BE300DD81A1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4118F713217D6BE300DD81A1 /* Constant.swift */; };
+		413466FE2179898100AFBB07 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413466FD2179898100AFBB07 /* Protocols.swift */; };
+		41346700217B11FC00AFBB07 /* FishSpirt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413466FF217B11FC00AFBB07 /* FishSpirt.swift */; };
 		41CA60E02177164B007CCE8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CA60DF2177164B007CCE8A /* AppDelegate.swift */; };
-		41CA60E22177164B007CCE8A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 41CA60E12177164B007CCE8A /* GameScene.sks */; };
-		41CA60E42177164B007CCE8A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 41CA60E32177164B007CCE8A /* Actions.sks */; };
 		41CA60E62177164B007CCE8A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CA60E52177164B007CCE8A /* GameScene.swift */; };
 		41CA60E82177164B007CCE8A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CA60E72177164B007CCE8A /* GameViewController.swift */; };
 		41CA60EB2177164B007CCE8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41CA60E92177164B007CCE8A /* Main.storyboard */; };
 		41CA60ED2177164C007CCE8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41CA60EC2177164C007CCE8A /* Assets.xcassets */; };
 		41CA60F02177164C007CCE8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41CA60EE2177164C007CCE8A /* LaunchScreen.storyboard */; };
+		41CA60F8217716CC007CCE8A /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CA60F7217716CC007CCE8A /* extension.swift */; };
+		41CA60FA217716E7007CCE8A /* extensionMageScence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CA60F9217716E7007CCE8A /* extensionMageScence.swift */; };
+		41EA84D7217EAE72003E494E /* BulletSpirt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EA84D6217EAE72003E494E /* BulletSpirt.swift */; };
+		41EA84D9217EE683003E494E /* WebSpirt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EA84D8217EE683003E494E /* WebSpirt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4118F711217C439C00DD81A1 /* CannonSpirt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannonSpirt.swift; sourceTree = "<group>"; };
+		4118F713217D6BE300DD81A1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		413466FD2179898100AFBB07 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		413466FF217B11FC00AFBB07 /* FishSpirt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishSpirt.swift; sourceTree = "<group>"; };
 		41CA60DC2177164B007CCE8A /* joyFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joyFish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41CA60DF2177164B007CCE8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41CA60E12177164B007CCE8A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		41CA60E32177164B007CCE8A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		41CA60E52177164B007CCE8A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		41CA60E72177164B007CCE8A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		41CA60EA2177164B007CCE8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41CA60EC2177164C007CCE8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41CA60EF2177164C007CCE8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41CA60F12177164C007CCE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41CA60F7217716CC007CCE8A /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		41CA60F9217716E7007CCE8A /* extensionMageScence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionMageScence.swift; sourceTree = "<group>"; };
+		41EA84D6217EAE72003E494E /* BulletSpirt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletSpirt.swift; sourceTree = "<group>"; };
+		41EA84D8217EE683003E494E /* WebSpirt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSpirt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +72,31 @@
 		41CA60DE2177164B007CCE8A /* joyFish */ = {
 			isa = PBXGroup;
 			children = (
+				41CA60F7217716CC007CCE8A /* extension.swift */,
 				41CA60DF2177164B007CCE8A /* AppDelegate.swift */,
-				41CA60E12177164B007CCE8A /* GameScene.sks */,
-				41CA60E32177164B007CCE8A /* Actions.sks */,
 				41CA60E52177164B007CCE8A /* GameScene.swift */,
 				41CA60E72177164B007CCE8A /* GameViewController.swift */,
 				41CA60E92177164B007CCE8A /* Main.storyboard */,
 				41CA60EC2177164C007CCE8A /* Assets.xcassets */,
 				41CA60EE2177164C007CCE8A /* LaunchScreen.storyboard */,
 				41CA60F12177164C007CCE8A /* Info.plist */,
+				41CA60F9217716E7007CCE8A /* extensionMageScence.swift */,
+				413466FD2179898100AFBB07 /* Protocols.swift */,
+				4118F713217D6BE300DD81A1 /* Constant.swift */,
+				41EA84DA217EE9A2003E494E /* spirt */,
 			);
 			path = joyFish;
+			sourceTree = "<group>";
+		};
+		41EA84DA217EE9A2003E494E /* spirt */ = {
+			isa = PBXGroup;
+			children = (
+				4118F711217C439C00DD81A1 /* CannonSpirt.swift */,
+				413466FF217B11FC00AFBB07 /* FishSpirt.swift */,
+				41EA84D8217EE683003E494E /* WebSpirt.swift */,
+				41EA84D6217EAE72003E494E /* BulletSpirt.swift */,
+			);
+			path = spirt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,10 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				41CA60EB2177164B007CCE8A /* Main.storyboard in Resources */,
-				41CA60E22177164B007CCE8A /* GameScene.sks in Resources */,
 				41CA60ED2177164C007CCE8A /* Assets.xcassets in Resources */,
 				41CA60F02177164C007CCE8A /* LaunchScreen.storyboard in Resources */,
-				41CA60E42177164B007CCE8A /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +170,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EA84D7217EAE72003E494E /* BulletSpirt.swift in Sources */,
 				41CA60E62177164B007CCE8A /* GameScene.swift in Sources */,
 				41CA60E82177164B007CCE8A /* GameViewController.swift in Sources */,
+				413466FE2179898100AFBB07 /* Protocols.swift in Sources */,
 				41CA60E02177164B007CCE8A /* AppDelegate.swift in Sources */,
+				4118F712217C439C00DD81A1 /* CannonSpirt.swift in Sources */,
+				41CA60F8217716CC007CCE8A /* extension.swift in Sources */,
+				4118F714217D6BE300DD81A1 /* Constant.swift in Sources */,
+				41346700217B11FC00AFBB07 /* FishSpirt.swift in Sources */,
+				41EA84D9217EE683003E494E /* WebSpirt.swift in Sources */,
+				41CA60FA217716E7007CCE8A /* extensionMageScence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

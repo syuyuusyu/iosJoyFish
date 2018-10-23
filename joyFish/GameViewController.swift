@@ -1,8 +1,8 @@
 //
 //  GameViewController.swift
-//  joyFish
+//  flyBird
 //
-//  Created by 沈渝 on 2018/10/17.
+//  Created by 沈渝 on 2018/10/16.
 //  Copyright © 2018 沈渝. All rights reserved.
 //
 
@@ -11,31 +11,24 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
+            let scene = GameScene(size: view.bounds.size) //通过代码创建一个GameScene类的实例对象
+            scene.scaleMode = .fill
+            view.presentScene(scene)
             view.ignoresSiblingOrder = true
-            
             view.showsFPS = true
             view.showsNodeCount = true
         }
     }
-
+    
     override var shouldAutorotate: Bool {
         return true
     }
-
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
@@ -43,8 +36,9 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
 }
+
