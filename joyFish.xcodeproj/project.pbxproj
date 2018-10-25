@@ -18,7 +18,7 @@
 		41CA60ED2177164C007CCE8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41CA60EC2177164C007CCE8A /* Assets.xcassets */; };
 		41CA60F02177164C007CCE8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41CA60EE2177164C007CCE8A /* LaunchScreen.storyboard */; };
 		41CA60F8217716CC007CCE8A /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CA60F7217716CC007CCE8A /* extension.swift */; };
-		41CA60FA217716E7007CCE8A /* extensionMageScence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CA60F9217716E7007CCE8A /* extensionMageScence.swift */; };
+		41CA60FA217716E7007CCE8A /* extensionGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CA60F9217716E7007CCE8A /* extensionGameScene.swift */; };
 		41EA84D7217EAE72003E494E /* BulletSpirt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EA84D6217EAE72003E494E /* BulletSpirt.swift */; };
 		41EA84D9217EE683003E494E /* WebSpirt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EA84D8217EE683003E494E /* WebSpirt.swift */; };
 		41EA84DC217FFF9D003E494E /* CoinSpirt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EA84DB217FFF9D003E494E /* CoinSpirt.swift */; };
@@ -38,7 +38,7 @@
 		41CA60EF2177164C007CCE8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41CA60F12177164C007CCE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41CA60F7217716CC007CCE8A /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
-		41CA60F9217716E7007CCE8A /* extensionMageScence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionMageScence.swift; sourceTree = "<group>"; };
+		41CA60F9217716E7007CCE8A /* extensionGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionGameScene.swift; sourceTree = "<group>"; };
 		41EA84D6217EAE72003E494E /* BulletSpirt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletSpirt.swift; sourceTree = "<group>"; };
 		41EA84D8217EE683003E494E /* WebSpirt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSpirt.swift; sourceTree = "<group>"; };
 		41EA84DB217FFF9D003E494E /* CoinSpirt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSpirt.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				41CA60EC2177164C007CCE8A /* Assets.xcassets */,
 				41CA60EE2177164C007CCE8A /* LaunchScreen.storyboard */,
 				41CA60F12177164C007CCE8A /* Info.plist */,
-				41CA60F9217716E7007CCE8A /* extensionMageScence.swift */,
+				41CA60F9217716E7007CCE8A /* extensionGameScene.swift */,
 				413466FD2179898100AFBB07 /* Protocols.swift */,
 				4118F713217D6BE300DD81A1 /* Constant.swift */,
 				41EA84DA217EE9A2003E494E /* spirt */,
@@ -184,7 +184,7 @@
 				41346700217B11FC00AFBB07 /* FishSpirt.swift in Sources */,
 				41EA84DC217FFF9D003E494E /* CoinSpirt.swift in Sources */,
 				41EA84D9217EE683003E494E /* WebSpirt.swift in Sources */,
-				41CA60FA217716E7007CCE8A /* extensionMageScence.swift in Sources */,
+				41CA60FA217716E7007CCE8A /* extensionGameScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
