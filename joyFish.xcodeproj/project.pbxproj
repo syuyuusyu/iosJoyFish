@@ -21,6 +21,7 @@
 		41CA60FA217716E7007CCE8A /* extensionMageScence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CA60F9217716E7007CCE8A /* extensionMageScence.swift */; };
 		41EA84D7217EAE72003E494E /* BulletSpirt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EA84D6217EAE72003E494E /* BulletSpirt.swift */; };
 		41EA84D9217EE683003E494E /* WebSpirt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EA84D8217EE683003E494E /* WebSpirt.swift */; };
+		41EA84DC217FFF9D003E494E /* CoinSpirt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EA84DB217FFF9D003E494E /* CoinSpirt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		41CA60F9217716E7007CCE8A /* extensionMageScence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionMageScence.swift; sourceTree = "<group>"; };
 		41EA84D6217EAE72003E494E /* BulletSpirt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletSpirt.swift; sourceTree = "<group>"; };
 		41EA84D8217EE683003E494E /* WebSpirt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSpirt.swift; sourceTree = "<group>"; };
+		41EA84DB217FFF9D003E494E /* CoinSpirt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSpirt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				413466FF217B11FC00AFBB07 /* FishSpirt.swift */,
 				41EA84D8217EE683003E494E /* WebSpirt.swift */,
 				41EA84D6217EAE72003E494E /* BulletSpirt.swift */,
+				41EA84DB217FFF9D003E494E /* CoinSpirt.swift */,
 			);
 			path = spirt;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				41CA60F8217716CC007CCE8A /* extension.swift in Sources */,
 				4118F714217D6BE300DD81A1 /* Constant.swift in Sources */,
 				41346700217B11FC00AFBB07 /* FishSpirt.swift in Sources */,
+				41EA84DC217FFF9D003E494E /* CoinSpirt.swift in Sources */,
 				41EA84D9217EE683003E494E /* WebSpirt.swift in Sources */,
 				41CA60FA217716E7007CCE8A /* extensionMageScence.swift in Sources */,
 			);

@@ -15,12 +15,16 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         return children.filter{ $0.name == "fish"}.map{  $0 as! FishSprit }
     }
     
+    var bar:SKSpriteNode?
+    
+    var score:Score?
+    
     var cannon :CannonSpirt {
         return children.filter{ $0.name == "cannon"}.map{ $0 as! CannonSpirt}[0]
     }
     
     func createFishAction() {
-        let waitAct = SKAction.wait(forDuration: 1, withRange: 1)
+        let waitAct = SKAction.wait(forDuration: 1, withRange: 0.6)
         let createAct = SKAction.run {
             self.initFishSpirt()
         }
@@ -51,7 +55,6 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-
         var bodyA : SKPhysicsBody
         var bodyB : SKPhysicsBody
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
@@ -63,11 +66,18 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         }
 
         if let _ = bodyB.node as? FishSprit,let bullet = bodyA.node as? BulletSpirt{
+            bullet.collisionCount += 1
             bullet.collide()
         }
         if let fish = bodyB.node as? FishSprit,let web = bodyA.node as? WebSpirt{
-            fish.dead()
-            web.collideTimes += 1
+            if !web.colliedFishList.contains(fish) {
+                web.collisionCount += 1
+                let random = CGFloat(1.0).arc4random
+                if random < fish.property.captureProbability{
+                    fish.dead()
+                }
+                web.colliedFishList.append(fish)
+            }
         }
 
         

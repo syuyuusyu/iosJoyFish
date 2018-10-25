@@ -70,20 +70,20 @@ class FishSprit :SKSpriteNode,AfterAddToGameScene{
         name = "fish"
         xScale = JoyFishConstant.Scale
         yScale = JoyFishConstant.Scale
-        anchorPoint = CGPoint(x:1,y:0.5)
+        //anchorPoint = CGPoint(x:1,y:0.5)
         //position = self.startPoint
         zPosition = JoyFishConstant.fishzPosition
         
         physicsBody = SKPhysicsBody(texture: texture!, size: size)
-        physicsBody?.isDynamic = true
+        physicsBody?.isDynamic = false
         physicsBody?.affectedByGravity = false
         physicsBody?.categoryBitMask = JoyFishConstant.fishCategoryBitMask
         physicsBody?.collisionBitMask = 0
-        physicsBody?.contactTestBitMask = JoyFishConstant.bulletCategoryBitMask | JoyFishConstant.webCategoryBitMask
+        //physicsBody?.contactTestBitMask = JoyFishConstant.bulletCategoryBitMask | JoyFishConstant.webCategoryBitMask
     }
     
     deinit {
-        //print("fish out!!")
+        print("fish out!!")
     }
     
     public func dead(){
@@ -92,7 +92,12 @@ class FishSprit :SKSpriteNode,AfterAddToGameScene{
         removeAction(forKey: "move")
         let deadAction = SKAction.animate(with: deadTextures, timePerFrame: 0.15)
         run(SKAction.repeat(deadAction, count: 4),
-                      completion: {                
+                      completion: {
+                        if let scene = self.scene as? GameScene{
+                            let endPoint = CGPoint(x:(scene.view?.bounds.width)!/2-(scene.bar?.size.width)!/2+20,y:0)
+                            let coin = CoinSpirt(level: self.property.coinLevel, multiple: self.property.multiple, at: self.position,to:endPoint)
+                            self.scene?.addChild(coin)
+                        }
                         self.removeFromParent()
                       }
         )
@@ -173,7 +178,7 @@ struct FishSpirtProperty {
     static func getProperty(imageName:String)->FishSpirtProperty?{
         switch imageName {
         case "shark1":
-            return FishSpirtProperty(baseSpeed: 3, speedRange: 1.1, captureProbability: 0.01, coinLevel: 2,multiple:10)
+            return FishSpirtProperty(baseSpeed: 3, speedRange: 1.1, captureProbability: 0.05, coinLevel: 2,multiple:10)
         case "fish1":
             return FishSpirtProperty(baseSpeed: 1, speedRange: 2, captureProbability: 0.7, coinLevel: 1,multiple:1)
         case "fish2":
@@ -187,13 +192,13 @@ struct FishSpirtProperty {
         case "fish6":
             return FishSpirtProperty(baseSpeed: 1.4, speedRange: 1, captureProbability: 0.3, coinLevel: 2,multiple:1)
         case "fish7":
-            return FishSpirtProperty(baseSpeed: 1, speedRange: 4, captureProbability: 0.2, coinLevel: 2,multiple:2)
+            return FishSpirtProperty(baseSpeed: 1, speedRange: 4, captureProbability: 0.25, coinLevel: 2,multiple:2)
         case "fish8":
-            return FishSpirtProperty(baseSpeed: 2.2, speedRange: 1, captureProbability: 0.15, coinLevel: 2,multiple:3)
+            return FishSpirtProperty(baseSpeed: 2.2, speedRange: 1, captureProbability: 0.2, coinLevel: 2,multiple:3)
         case "fish9":
-            return FishSpirtProperty(baseSpeed: 1.2, speedRange: 3, captureProbability: 0.1, coinLevel: 2,multiple:4)
+            return FishSpirtProperty(baseSpeed: 1.2, speedRange: 3, captureProbability: 0.15, coinLevel: 2,multiple:4)
         case "fish10":
-            return FishSpirtProperty(baseSpeed: 1, speedRange: 2, captureProbability: 0.05, coinLevel: 2,multiple:5)
+            return FishSpirtProperty(baseSpeed: 1, speedRange: 2, captureProbability: 0.1, coinLevel: 2,multiple:5)
         default:
             return nil
         }

@@ -78,6 +78,9 @@ class CannonSpirt :SKSpriteNode,AfterAddToGameScene{
     
     public func fire(target targetCGPoint:CGPoint){
         if !onFire{
+            if let scene = self.scene as? GameScene{
+                scene.score?.score -= self.level
+            }
             let dx = targetCGPoint.x - position.x
             let dy = targetCGPoint.y - position.y
             let angle = atan2(dx,dy)

@@ -27,13 +27,7 @@ class WebSpirt :SKSpriteNode,AfterAddToGameScene{
     
     var level:Int
     
-    var collideTimes :Int = 0{
-        didSet{
-            if collideTimes > 5 {
-                physicsBody = nil
-            }
-        }
-    }
+    var colliedFishList = [FishSprit]()
     
     init(level:Int,at position:CGPoint){
         guard let texture = WebSpirt.textureMap["web\(level)"] else {
@@ -46,8 +40,7 @@ class WebSpirt :SKSpriteNode,AfterAddToGameScene{
         xScale = JoyFishConstant.Scale
         yScale = JoyFishConstant.Scale
         
-        physicsBody = SKPhysicsBody(texture: WebSpirt.textureMap["web6"]!, size: size)
-            //SKPhysicsBody(circleOfRadius: size.height+20, center: position)
+        physicsBody = SKPhysicsBody(circleOfRadius:max(self.size.width/2,self.size.height/2))
         physicsBody?.isDynamic = true
         physicsBody?.affectedByGravity = false
         physicsBody?.categoryBitMask = JoyFishConstant.webCategoryBitMask
@@ -57,11 +50,17 @@ class WebSpirt :SKSpriteNode,AfterAddToGameScene{
     }
     
     deinit {
-        //print("web remove")
+        print("web.collisionCount",self.collisionCount)
     }
+    
+    var collisionCount = 0
     
     public func afterAddToScene() {
         let action = SKAction.customAction(withDuration: 2, actionBlock: { (node,elapsedTime)  in
+            if elapsedTime > 0.1 {
+                //print(self.collisionCount)
+                node.physicsBody = nil
+            }
             if let node = node as? WebSpirt{
                 node.alpha -= 1/60
             }

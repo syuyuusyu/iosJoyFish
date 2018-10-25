@@ -9,7 +9,7 @@
 import SpriteKit
 
 public struct JoyFishConstant {
-    static public let Scale: CGFloat = 0.4
+    static public let Scale: CGFloat = 0.5
     static public let fishCategoryBitMask :UInt32 = 0b11
     static public let bulletCategoryBitMask :UInt32 = 0b10
     static public let webCategoryBitMask :UInt32 = 0b1

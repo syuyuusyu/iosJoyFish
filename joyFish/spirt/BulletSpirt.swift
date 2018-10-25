@@ -40,13 +40,13 @@ class BulletSpirt :SKSpriteNode,AfterAddToGameScene{
         name = "bullet"
         xScale = JoyFishConstant.Scale
         yScale = JoyFishConstant.Scale
-        anchorPoint = CGPoint(x:0,y:0.5)
+        //anchorPoint = CGPoint(x:0,y:0.5)
         position = point
         zPosition = JoyFishConstant.bulletzPosition
         zRotation = CGFloat.pi/2 - direction
         speed = 2.0 + CGFloat(level)/2
         
-        physicsBody = SKPhysicsBody(texture: texture, size: size)
+        physicsBody = SKPhysicsBody(circleOfRadius:min(self.size.width/2,self.size.height/2))
         physicsBody?.isDynamic = true
         physicsBody?.affectedByGravity = false
         physicsBody?.categoryBitMask = JoyFishConstant.bulletCategoryBitMask
@@ -55,8 +55,10 @@ class BulletSpirt :SKSpriteNode,AfterAddToGameScene{
     }
     
     deinit {
-        //print("bullet out!!!")
+        //print("bullet collisionCount",collisionCount)
     }
+    
+    var collisionCount = 0
     
     public func collide(){
         let web = WebSpirt(level: level, at: position)
